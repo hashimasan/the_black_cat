@@ -1,0 +1,47 @@
+@charset "UTF-8";
+html {
+  font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN','Times New Roman','Roman',sans-serif;
+  font-size: 62.5%;
+}
+
+.bg {
+  background: url("../img/back.png");
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 30px rgba(255, 255, 255, 0.5);
+}
+
+.contents {
+  position: absolute;
+  bottom: 65vh;
+  width: 100vw;
+}
+
+.contents h1 {
+  font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
+  text-align: center;
+  color: #ffffff;
+}
+
+.wine {
+  position: absolute;
+  left: -3vw;
+  top: -30vh;
+}
+
+.wine img {
+  width: 30vw;
+  height: auto;
+}

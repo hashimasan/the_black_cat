@@ -1,0 +1,249 @@
+@charset "UTF-8";
+html {
+  font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN','Times New Roman','Roman',sans-serif;
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #121212;
+}
+
+a:visited {
+  color: #121212;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+a:active {
+  color: #ffffff;
+}
+
+.none {
+  display: none;
+}
+
+.bg {
+  background: url("../img/back.png");
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 2vw rgba(255, 255, 255, 0.5);
+}
+
+/*ハンバーガーボタン*/
+.el_humburger {
+  position: fixed;
+  top: 45px;
+  right: 60px;
+  width: 46px;
+  height: 25px;
+  padding-top: 1px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 0px;
+  z-index: 20;
+  cursor: pointer;
+  pointer-events: auto;
+  color: #ffffff;
+  text-align: center;
+}
+
+.el_humburger_wrapper {
+  margin-bottom: 5px;
+  width: 42px;
+  display: inline-block;
+}
+
+.el_humburger_text {
+  font-size: calc(5.6rem + ((1vw - 0.76rem) * 2.1429));
+  letter-spacing: 0.1em;
+}
+
+.js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
+  display: none;
+}
+
+.el_humburger_text.el_humburger_text__close {
+  display: none;
+}
+
+.js_humburgerOpen .el_humburger_text.el_humburger_text__close {
+  display: block;
+}
+
+.el_humburger span.el_humburger_bar {
+  display: block;
+  width: 100%;
+  margin: 0 auto 9px;
+  height: 5px;
+  background: #ffffff;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.el_humburger span.el_humburger_bar:last-child {
+  margin-bottom: 0;
+}
+
+.js_humburgerOpen .el_humburger span.el_humburger_bar {
+  background: #000;
+}
+
+.js_humburgerOpen .el_humburger span.el_humburger_bar.top {
+  -webkit-transform: translateY(16px) rotate(-45deg);
+  -ms-transform: translateY(16px) rotate(-45deg);
+  transform: translateY(16px) rotate(-45deg);
+}
+
+.js_humburgerOpen .el_humburger span.el_humburger_bar.middle {
+  opacity: 0;
+}
+
+.js_humburgerOpen .el_humburger span.el_humburger_bar.bottom {
+  -webkit-transform: translateY(-11px) rotate(45deg);
+  -ms-transform: translateY(-11px) rotate(45deg);
+  transform: translateY(-11px) rotate(45deg);
+}
+
+.el_humburgerButton.el_humburgerButton__close {
+  top: 2%;
+  right: 2%;
+}
+
+.el_humburgerButton__close span.el_humburger_bar {
+  display: block;
+  width: 35px;
+  margin: 0 auto;
+  height: 4px;
+  background: #000;
+}
+
+.el_humburgerButton__close span.el_humburger_bar.top {
+  -webkit-transform: translateY(5px) rotate(-45deg);
+  -ms-transform: translateY(5px) rotate(-45deg);
+  transform: translateY(5px) rotate(-45deg);
+}
+
+.el_humburgerButton__close span.el_humburger_bar.bottom {
+  -webkit-transform: translateY(-6px) rotate(45deg);
+  -ms-transform: translateY(-6px) rotate(45deg);
+  transform: translateY(-6px) rotate(45deg);
+}
+
+.navi {
+  position: fixed;
+  right: -4vw;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: solid 2vw rgba(0, 0, 0, 0.6);
+  width: 0;
+  z-index: 3;
+  padding-top: 100px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 600ms ease-out;
+  -o-transition: all 600ms ease-out;
+  transition: all 600ms ease-out;
+  overflow: hidden;
+}
+
+.js_humburgerOpen .navi {
+  width: 100vw;
+  margin-right: 4vw;
+}
+
+.navi_item1 {
+  font-size: calc(2.4rem + ((1vw - 1rem) * 2.1429));
+  white-space: nowrap;
+  margin-left: 10vw;
+}
+
+.navi_item2 {
+  font-size: calc(2.4rem + ((1vw - 1rem) * 2.1429));
+  white-space: nowrap;
+  margin-left: 60vw;
+}
+
+.navi_item3 {
+  font-size: calc(2.4rem + ((1vw - 1rem) * 2.1429));
+  white-space: nowrap;
+  margin-left: 10vw;
+}
+
+.navi_item4 {
+  font-size: calc(2.4rem + ((1vw - 1rem) * 2.1429));
+  white-space: nowrap;
+  margin-left: 70vw;
+}
+
+.navi_item.op_innerLink {
+  cursor: pointer;
+}
+
+.big_letters {
+  font-size: calc(9.6rem + ((1vw - 2rem) * 2.1429));
+}
+
+/* コンテンツ Poe */
+#poe {
+  position: absolute;
+  bottom: 65vh;
+  width: 100vw;
+}
+
+#poe h1 {
+  font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
+  text-align: center;
+  color: #ffffff;
+}
+
+.wine {
+  position: absolute;
+  left: -3vw;
+  top: -30vh;
+}
+
+.wine img {
+  width: 30vw;
+  height: auto;
+}
+
+.man {
+  position: absolute;
+  left: 65vw;
+  top: 25vh;
+}
+
+.man img {
+  width: 20vw;
+  height: auto;
+}
+
+.cat_run {
+  position: absolute;
+  left: 40vw;
+  top: 51vh;
+}
+
+.cat_run img {
+  width: 15vw;
+  height: auto;
+}
