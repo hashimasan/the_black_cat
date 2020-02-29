@@ -60,14 +60,15 @@ a:active {color:#ffffff;}
 
 .bg_before{
 	position: fixed;
-	width: 96vw;
-	height: 92vh;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: rgba(0,0,0,0.3);
-	border: solid 2vw rgba(255,255,255,0.3);
+	background-color: rgba(68, 37, 37, 0.3);
+	border: solid 2vw rgba(49, 30, 30, 0.3);
 }
 
 .big_letters{
@@ -85,7 +86,7 @@ a:active {color:#ffffff;}
 		font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
 		text-align: center;
 		color:#ffffff;
-		padding-top: 15vh;
+		padding-top: 25vh;
 	}
 }
 
@@ -99,17 +100,88 @@ a:active {color:#ffffff;}
 		height: auto;
 	}
 }
-.drop{
-	position: absolute;
-	left: 23.9vw;
-	top: -20vh;
+// .drop{
+// 	position: absolute;
+// 	left: 23.9vw;
+// 	top: 10vh;
 
-	img{
-		width: 1vw;
-		height: auto;
+// 	img{
+// 		width: 1vw;
+// 		height: auto;
+// 	}
+// }
+
+
+  
+  .drop {
+	position: absolute;
+	  width: 20px;
+	  height: 20px;
+	top: 14vh;
+	left: 23.5vw;
+	background: #FFF;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-moz-animation-name: drip;
+	-webkit-animation-name: drip;
+	animation-name: drip;
+	-moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
+	-webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
+	animation-timing-function: cubic-bezier(1,0,.91,.19);
+	-moz-animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+  }
+  
+  .drop:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	  height: 0;
+	  border-left: 10px solid transparent;
+	  border-right: 10px solid transparent;
+	  border-bottom: 30px solid rgba(255,255,255,1);
+	  border-radius: 10%;
+	// top: -22px;
+	bottom: 55%;
+	left: 50%;
+	// right: 0;
+	margin: auto;
+	transform: translateX(-50%);
+	-moz-animation-name: drip2;
+	-webkit-animation-name: drip2;
+	animation-name: drip2;
+	-moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
+	-webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
+	animation-timing-function: cubic-bezier(1,0,.91,.19);
+	-moz-animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+  }
+
+  @keyframes drip {
+	  to {
+		top: 100vh;
+		width: 50px;
+		height: 50px;
+	  }
+  }
+
+
+  @keyframes drip2{
+	to {
+		border-left: 26px solid transparent;
+		border-right: 26px solid transparent;
+		border-bottom: 77px solid rgba(255,255,255,1);
 	}
 }
-
 
 
 .loop_wrap {
@@ -129,7 +201,7 @@ a:active {color:#ffffff;}
 	  transform: translateX(100%);
 	}
 	to {
-	  transform: translateX(-500%);
+	  transform: translateX(-850%);
 	}
   }
   
@@ -138,14 +210,14 @@ a:active {color:#ffffff;}
 	  transform: translateX(0);
 	}
 	to {
-	  transform: translateX(-500%);
+	  transform: translateX(-850%);
 	}
   }
 
 
 .man{
 	position: absolute;
-	left: 80vw;
+	left: 145vw;
 	bottom: 6vh;
 	z-index: 100;
 
@@ -157,8 +229,8 @@ a:active {color:#ffffff;}
 
 .cat_run{
 	position: absolute;
-	left: 50vw;
-	bottom: 7vh;
+	left: 100vw;
+	bottom: 5vh;
 	z-index: 100;
 
 	img{
@@ -214,6 +286,11 @@ a:active {color:#ffffff;}
 		text-align: left;
 		line-height: 3rem;
 	}
+	.quote{
+		font-size: 1rem;
+		text-align: right;
+		color: #ffffff;
+	}
 }
 
 /* コンテンツ poe */
@@ -243,10 +320,17 @@ a:active {color:#ffffff;}
 	.about_poe{
 		font-size: calc(1.2rem + ((0.8vw - 0.76rem) * 2.1429));
 		color:#ffffff;
-		width: 70vw;
+		width: 75vw;
 		display: inline-block;
 		text-align: left;
 		line-height: 3rem;
+	}
+	.quote{
+		font-size: 1rem;
+		text-align: right;
+		color: #ffffff;
+		width: 75vw;
+		margin: 0 auto;
 	}
 }
 
@@ -403,4 +487,22 @@ a:active {color:#ffffff;}
 	width: 100vw;
 	height: 85vh;
 	z-index: 1000;
+}
+
+/* pagination */
+#pagination{
+	position: fixed;
+	width: 100vw;
+	text-align: center;
+
+	.blood_after{
+		width: 1.5vw;
+		height: auto;
+	}
+
+	.blood_before{
+		width: 1vw;
+		height: auto;
+		margin-left: 10px;
+	}
 }

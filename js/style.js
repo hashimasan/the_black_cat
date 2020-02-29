@@ -5,7 +5,6 @@ window.onload = function () {
     ///////////////
     $(function () {
         $('.book1').click(function () {
-            console.log('ahhhhhhhyeahhhhhhhh');
             $('.main_book_img').attr('src', 'img/the_gold_bug.png');
             $('.book_title').replaceWith(
                 '<p class="book_title">黄金虫</p>'
