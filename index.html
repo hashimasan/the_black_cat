@@ -7,25 +7,58 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/wave.css">
+	<link rel="stylesheet" href="css/scroll.css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap&subset=japanese"
 		rel="stylesheet">
 </head>
 
 <body>
-	<div class="bg"></div>
+	<!-- <div class="bg"></div> -->
+	<div class="bg_sec">
+		<span id="background"></span>
+	</div>
 	<div class="bg_before"></div>
-	<div id="top" class="none">
+
+
+	<div id="top" class="">
 		<figure class="wine"><img src="img/wine.png"></figure>
+		<figure class="drop"><img src="img/drop.png"></figure>
 		<h1>The Black Cat</h1>
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
 			<path id="wave" d="" /></svg>
-		<figure class="cat_run"><img src="img/cat_run.png"></figure>
-		<figure class="man"><img src="img/man1.png"></figure>
+		<div class="loop_wrap">
+			<figure class="cat_run"><img src="img/cat_run.png"></figure>
+			<figure class="man"><img src="img/man1.png"></figure>
+		</div>
+		<svg class="svgBack" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<path id="wave2" d="" /></svg>
+	</div>
+
+	<div id="the_black_cat" class="none">
+		<div id=" in_the_black_cat">
+			<h1>The Black Cat</h1>
+			<div class="cat_contents">
+				<div class="img_area">
+					<figure><img src="img/black_cat3.png" alt="" class="black_cat_img"></figure>
+				</div>
+				<div class="p_area">
+					<p class="poe_and_date">Edgar Allan Poe 1843/08/19</p>
+					<div class="cat_center">
+						<p class="about_cat">
+							&emsp;「黒猫」（くろねこ、The Black
+							Cat）は、1843年に発表されたエドガー・アラン・ポーの短編小説。酒乱によって可愛がっていた黒猫を殺した男が、それとそっくりな猫によって次第に追い詰められていく様を描いたゴシック風の恐怖小説であり、ポーの代表的な短編の一つ。天邪鬼の心理を扱っていることでは同作者の「天邪鬼」と、犯罪の露見を扱っている点では「告げ口心臓」とモチーフを同じくする。
+
+							&emsp;『サタデー・イヴニング・ポスト』（ただし、このときは一時的に『ユナイテッド・ステイツ・サタデー・ポスト』の名称を使用）8月19日に初出。発表時より好評を博し、ポーの同時代人トマス・ダン・イングリッシュの『The
+							Ghost of the Grey Tadpole』をはじめ様々なパロディがある。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div id="poe" class="none">
 		<h1>Edgar Allan Poe</h1>
-
 		<p class="poe_date">1809/01/19 - 1849/10/07</p>
 		<div class="poe_center">
 			<p class="about_poe">
@@ -37,42 +70,21 @@
 		</div>
 	</div>
 
-	<div id="the_black_cat" class="none">
-		<h1>The Black Cat</h1>
-		<div class="cat_contents">
-			<div class="img_area">
-				<figure><img src="img/black_cat3.png" alt="" class="black_cat_img"></figure>
-			</div>
-			<div class="p_area">
-				<p class="poe_and_date">Edgar Allan Poe 1843/08/19</p>
-				<div class="cat_center">
-					<p class="about_cat">
-						&emsp;「黒猫」（くろねこ、The Black
-						Cat）は、1843年に発表されたエドガー・アラン・ポーの短編小説。酒乱によって可愛がっていた黒猫を殺した男が、それとそっくりな猫によって次第に追い詰められていく様を描いたゴシック風の恐怖小説であり、ポーの代表的な短編の一つ。天邪鬼の心理を扱っていることでは同作者の「天邪鬼」と、犯罪の露見を扱っている点では「告げ口心臓」とモチーフを同じくする。
-
-						&emsp;『サタデー・イヴニング・ポスト』（ただし、このときは一時的に『ユナイテッド・ステイツ・サタデー・ポスト』の名称を使用）8月19日に初出。発表時より好評を博し、ポーの同時代人トマス・ダン・イングリッシュの『The
-						Ghost of the Grey Tadpole』をはじめ様々なパロディがある。
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="books">
+	<div id="books" class="none">
 		<h1>Books</h1>
 		<div class="main_book">
 			<div class="img_area">
-				<figure><img src="img/black_cat3.png" alt="" class="main_book_img"></figure>
+				<figure><img src="img/the_gold_bug.png" alt="" class="main_book_img"></figure>
 			</div>
 			<div class="p_area">
-				<p class="book_title">The Black Cat</p>
+				<p class="book_title">黄金虫</p>
 				<div class="about_book_center">
 					<p class="about_book">
 						<span>発売日</span>： 1995/5/28<br>
-						<span>文庫</span>: 292ページ<br>
+						<span>文庫</span>: 305ページ<br>
 						<span>出版社</span>: 橋本文庫<br>
 						<span>ISBN-13</span>: 978-4087520255<br>
-						<span>定価</span>：540円<br>
+						<span>定価</span>：580円<br>
 					</p>
 
 				</div>
@@ -87,6 +99,12 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="dummy" class="">
+		<h1></h1>
+	</div>
+
+	<!-- <div id="bottom_space"></div> -->
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/style.js"></script>
@@ -94,5 +112,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.wavify.js"></script>
 <script type="text/javascript" src="js/wave.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
 
 </html>

@@ -1,1 +1,1 @@
-@import url("https://fonts.googleapis.com/css?family=Merienda");svg{height:25vh;width:100vw;position:absolute;top:47vh;left:0}.container{display:flex;justify-content:center;align-items:center;top:45vh}
+@import url("https://fonts.googleapis.com/css?family=Merienda");svg{height:25vh;width:100vw;position:absolute;bottom:0;left:0;transform:scale(1, -1);z-index:10}.svgBack{height:25vh;width:100vw;position:absolute;bottom:0;left:0vw;transform:scale(1, -1);z-index:1}

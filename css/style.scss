@@ -17,13 +17,13 @@ a:active {color:#ffffff;}
 }
 
 
-.bg{
-	background: url("../img/back.png");
-	background-size: cover;
-	position: relative;
-	height:100vh;
-	width:100vw;
-	}
+// .bg{
+// 	background: url("../img/back.png");
+// 	background-size: cover;
+// 	position: relative;
+// 	height:100vh;
+// 	width:100vw;
+// 	}
 
 // .bg::before{
 // 	content: '';
@@ -36,8 +36,30 @@ a:active {color:#ffffff;}
 // 	border: solid 2vw rgba(255,255,255,0.3);
 // }
 
-.bg_before{
+
+.bg_sec {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+  }
+  
+  #background {
 	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: calc(100% + 6vw);
+	height: calc(100% + 6vh);
+	background-image: url(../img/back.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+
+.bg_before{
+	position: fixed;
 	width: 96vw;
 	height: 92vh;
 	top: 0;
@@ -55,32 +77,77 @@ a:active {color:#ffffff;}
 
 /* コンテンツ top */
 #top{
-	position: absolute;
-	bottom:65vh;
+	position: fixed;
 	width:100vw;
+	height: 100vh;
 	
 	h1{
 		font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
 		text-align: center;
 		color:#ffffff;
+		padding-top: 15vh;
 	}
 }
 
 .wine{
 	position: absolute;
-	left: -3vw;
-	top: -30vh;
+	left: -10vw;
+	top: -5vh;
 
 	img{
-		width: 30vw;
+		width: 35vw;
+		height: auto;
+	}
+}
+.drop{
+	position: absolute;
+	left: 23.9vw;
+	top: -20vh;
+
+	img{
+		width: 1vw;
 		height: auto;
 	}
 }
 
+
+
+.loop_wrap {
+	display: flex;
+
+	overflow: hidden;
+  }
+  .loop_wrap img:first-child {
+	animation: loop 50s -25s linear infinite;
+  }
+  
+  .loop_wrap img:last-child {
+	animation: loop2 50s linear infinite;
+  }
+  @keyframes loop {
+	0% {
+	  transform: translateX(100%);
+	}
+	to {
+	  transform: translateX(-500%);
+	}
+  }
+  
+  @keyframes loop2 {
+	0% {
+	  transform: translateX(0);
+	}
+	to {
+	  transform: translateX(-500%);
+	}
+  }
+
+
 .man{
 	position: absolute;
-	left: 65vw;
-	top: 25vh;
+	left: 80vw;
+	bottom: 6vh;
+	z-index: 100;
 
 	img{
 		width: 20vw;
@@ -90,8 +157,9 @@ a:active {color:#ffffff;}
 
 .cat_run{
 	position: absolute;
-	left: 40vw;
-	top: 51vh;
+	left: 50vw;
+	bottom: 7vh;
+	z-index: 100;
 
 	img{
 		width: 15vw;
@@ -99,43 +167,13 @@ a:active {color:#ffffff;}
 	}
 }
 
-/* コンテンツ poe */
-#poe{
-	position: absolute;
-	top:15vh;
-	width:100vw;
-	
-	h1{
-		font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
-		text-align: center;
-		color:#ffffff;
-		margin-bottom: 5vh;
-	}
-
-	.poe_date{
-		font-size: calc(1.6rem + ((1vw - 0.76rem) * 2.1429));
-		text-align: center;
-		color:#ffffff;
-		margin-bottom: 8vh;
-	}
-	.poe_center{
-		text-align: center;
-	}
-	.about_poe{
-		font-size: calc(1.2rem + ((0.8vw - 0.76rem) * 2.1429));
-		color:#ffffff;
-		width: 70vw;
-		display: inline-block;
-		text-align: left;
-		line-height: 3rem;
-	}
-}
-
 /* コンテンツ the_black_cat */
 #the_black_cat{
-	position: absolute;
-	top:15vh;
-	width:100vw;
+	position: fixed;
+	//top: 100vh;
+	padding-top: 15vh;
+	width: 100vw;
+	height: 85vh;
 	
 	h1{
 		font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
@@ -178,11 +216,48 @@ a:active {color:#ffffff;}
 	}
 }
 
+/* コンテンツ poe */
+#poe{
+	position: fixed;
+	//top: 200vh;
+	padding-top: 15vh;
+	width: 100vw;
+	height: 85vh;
+	
+	h1{
+		font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
+		text-align: center;
+		color:#ffffff;
+		margin-bottom: 5vh;
+	}
+
+	.poe_date{
+		font-size: calc(1.6rem + ((1vw - 0.76rem) * 2.1429));
+		text-align: center;
+		color:#ffffff;
+		margin-bottom: 8vh;
+	}
+	.poe_center{
+		text-align: center;
+	}
+	.about_poe{
+		font-size: calc(1.2rem + ((0.8vw - 0.76rem) * 2.1429));
+		color:#ffffff;
+		width: 70vw;
+		display: inline-block;
+		text-align: left;
+		line-height: 3rem;
+	}
+}
+
 /* コンテンツ books */
 #books{
-	position: absolute;
-	top:15vh;
-	width:100vw;
+	position: fixed;
+	//top: 300vh;
+	padding-top: 15vh;
+	width: 100vw;
+	height: 85vh;
+	z-index: 10000;
 	
 	h1{
 		font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
@@ -231,14 +306,19 @@ a:active {color:#ffffff;}
 	.other_books{
 		justify-content: center;
 		display: flex;
+		bottom: 0vh;
+		overflow: hidden;
+		position: absolute;
+		bottom: 2vw;
+		left: 0;
+		right: 0;
 
 		.book{
 			margin:9vh 2vw 0vh;
-			bottom: 2vh;
 		}
 
 		.book1{
-			background: url('../img/black_cat3.png');
+			background: url('../img/the_gold_bug.png');
 			display: inline-block;
 			background-position: top center;
 			background-repeat: no-repeat;
@@ -257,7 +337,7 @@ a:active {color:#ffffff;}
 		}
 
 		.book2{
-			background: url('../img/the_gold_bug.png');
+			background: url('../img/black_cat3.png');
 			display: inline-block;
 			background-position: top center;
 			background-repeat: no-repeat;
@@ -314,4 +394,13 @@ a:active {color:#ffffff;}
 		}
 	}
 
+}
+
+/* コンテンツ dummy */
+#dummy{
+	position: absolute;
+	top: 380vh;
+	width: 100vw;
+	height: 85vh;
+	z-index: 1000;
 }

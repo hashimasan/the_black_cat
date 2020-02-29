@@ -28,16 +28,28 @@ a:active {
   display: none;
 }
 
-.bg {
-  background: url("../img/back.png");
-  background-size: cover;
-  position: relative;
+.bg_sec {
+  position: fixed;
+  width: 100%;
   height: 100vh;
-  width: 100vw;
+  overflow: hidden;
+}
+
+#background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: calc(100% + 6vw);
+  height: calc(100% + 6vh);
+  background-image: url(../img/back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg_before {
-  position: absolute;
+  position: fixed;
   width: 96vw;
   height: 92vh;
   top: 0;
@@ -54,32 +66,76 @@ a:active {
 
 /* コンテンツ top */
 #top {
-  position: absolute;
-  bottom: 65vh;
+  position: fixed;
   width: 100vw;
+  height: 100vh;
 }
 
 #top h1 {
   font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
   text-align: center;
   color: #ffffff;
+  padding-top: 15vh;
 }
 
 .wine {
   position: absolute;
-  left: -3vw;
-  top: -30vh;
+  left: -10vw;
+  top: -5vh;
 }
 
 .wine img {
-  width: 30vw;
+  width: 35vw;
   height: auto;
+}
+
+.drop {
+  position: absolute;
+  left: 23.9vw;
+  top: -20vh;
+}
+
+.drop img {
+  width: 1vw;
+  height: auto;
+}
+
+.loop_wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.loop_wrap img:first-child {
+  animation: loop 50s -25s linear infinite;
+}
+
+.loop_wrap img:last-child {
+  animation: loop2 50s linear infinite;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-500%);
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-500%);
+  }
 }
 
 .man {
   position: absolute;
-  left: 65vw;
-  top: 25vh;
+  left: 80vw;
+  bottom: 6vh;
+  z-index: 100;
 }
 
 .man img {
@@ -89,8 +145,9 @@ a:active {
 
 .cat_run {
   position: absolute;
-  left: 40vw;
-  top: 51vh;
+  left: 50vw;
+  bottom: 7vh;
+  z-index: 100;
 }
 
 .cat_run img {
@@ -98,45 +155,12 @@ a:active {
   height: auto;
 }
 
-/* コンテンツ poe */
-#poe {
-  position: absolute;
-  top: 15vh;
-  width: 100vw;
-}
-
-#poe h1 {
-  font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 5vh;
-}
-
-#poe .poe_date {
-  font-size: calc(1.6rem + ((1vw - 0.76rem) * 2.1429));
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 8vh;
-}
-
-#poe .poe_center {
-  text-align: center;
-}
-
-#poe .about_poe {
-  font-size: calc(1.2rem + ((0.8vw - 0.76rem) * 2.1429));
-  color: #ffffff;
-  width: 70vw;
-  display: inline-block;
-  text-align: left;
-  line-height: 3rem;
-}
-
 /* コンテンツ the_black_cat */
 #the_black_cat {
-  position: absolute;
-  top: 15vh;
+  position: fixed;
+  padding-top: 15vh;
   width: 100vw;
+  height: 85vh;
 }
 
 #the_black_cat h1 {
@@ -180,11 +204,48 @@ a:active {
   line-height: 3rem;
 }
 
+/* コンテンツ poe */
+#poe {
+  position: fixed;
+  padding-top: 15vh;
+  width: 100vw;
+  height: 85vh;
+}
+
+#poe h1 {
+  font-size: calc(3.6rem + ((1vw - 0.76rem) * 2.1429));
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 5vh;
+}
+
+#poe .poe_date {
+  font-size: calc(1.6rem + ((1vw - 0.76rem) * 2.1429));
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 8vh;
+}
+
+#poe .poe_center {
+  text-align: center;
+}
+
+#poe .about_poe {
+  font-size: calc(1.2rem + ((0.8vw - 0.76rem) * 2.1429));
+  color: #ffffff;
+  width: 70vw;
+  display: inline-block;
+  text-align: left;
+  line-height: 3rem;
+}
+
 /* コンテンツ books */
 #books {
-  position: absolute;
-  top: 15vh;
+  position: fixed;
+  padding-top: 15vh;
   width: 100vw;
+  height: 85vh;
+  z-index: 10000;
 }
 
 #books h1 {
@@ -235,15 +296,20 @@ a:active {
 #books .other_books {
   justify-content: center;
   display: flex;
+  bottom: 0vh;
+  overflow: hidden;
+  position: absolute;
+  bottom: 2vw;
+  left: 0;
+  right: 0;
 }
 
 #books .other_books .book {
   margin: 9vh 2vw 0vh;
-  bottom: 2vh;
 }
 
 #books .other_books .book1 {
-  background: url("../img/black_cat3.png");
+  background: url("../img/the_gold_bug.png");
   display: inline-block;
   background-position: top center;
   background-repeat: no-repeat;
@@ -262,7 +328,7 @@ a:active {
 }
 
 #books .other_books .book2 {
-  background: url("../img/the_gold_bug.png");
+  background: url("../img/black_cat3.png");
   display: inline-block;
   background-position: top center;
   background-repeat: no-repeat;
@@ -316,4 +382,13 @@ a:active {
 
 #books .other_books .book4:hover {
   transform: scale3d(1.3, 1.3, 1.3);
+}
+
+/* コンテンツ dummy */
+#dummy {
+  position: absolute;
+  top: 380vh;
+  width: 100vw;
+  height: 85vh;
+  z-index: 1000;
 }
