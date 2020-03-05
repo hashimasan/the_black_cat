@@ -6,7 +6,7 @@ svg {
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: scale(1, -1);// なんか上下反転したから追加した
+  //transform: scale(1, -1);// なんか上下反転したから追加した
   z-index: 10;
 }
 
@@ -16,7 +16,7 @@ svg {
   position: absolute;
   bottom: 0;
   left: 0vw;
-  transform: scale(1, -1);// なんか上下反転したから追加した
+  //transform: scale(1, -1);// なんか上下反転したから追加した
   z-index: 1;
 }
 

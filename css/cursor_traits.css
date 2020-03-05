@@ -1,0 +1,29 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #000000;
+}
+
+.loading {
+  /* background: url(../img/img_bg.png) 0 0 / cover; */
+  background-color: #000000;
+  /* height: 100%;
+  width: 100%; */
+}
+
+img.load_bg {
+  display: none;
+}
+
+img.load_bg{
+  position: relative;
+}
+img.load_black_cat{
+  position: absolute;
+  width: 20vw;
+  top: 50vh;
+  left: 40vw;
+}
